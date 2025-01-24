@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: flex; /* Use flexbox for layout */
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px; /* Increased width for better layout */
+            width: 100%;
+        }
+        .image-container {
+            flex: 1; /* Allow the image container to grow */
+            padding-right: 20px; /* Space between image and details */
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .details-container {
+            flex: 2; /* Allow the details container to grow more than image */
+        }
+        .button-container {
+            display: flex; /* Use flexbox for button layout */
+            gap: 10px; /* Space between buttons */
+            margin-top: 20px; /* Space above buttons */
+        }
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .delete-button {
+            background-color: #dc3545;
+            color: white;
+        }
+        .delete-button:hover {
+            background-color: #c82333;
+        }
+        .cancel-button {
+            background-color: #007bff;
+            color: white;
+        }
+        .cancel-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="/<%= product.filename %>" alt="Product Image">
+        </div>
+        <div class="details-container">
+            <h2>Are you sure you want to delete this product?</h2>
+            <p><strong>Product Name:</strong> <%= product.name %></p>
+            <p><strong>Product Price:</strong> <%= product.price %></p>
+            <p><strong>Description:</strong> <%= product.description %></p>
+            <form action="/crud/v1/deleteProduct" method="POST">
+                <input type="hidden" name="productId" value="<%= id %>">
+                <div class="button-container">
+                    <input type="submit" class="button delete-button" value="Delete Product">
+                    <a href="/"><button type="button" class="button cancel-button">Cancel</button></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

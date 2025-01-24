@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="http://localhost:5500/FrontEnd/Style/cartPage.css"> <!-- Link to the CSS -->
+</head>
+<body>
+    <div id="cart-page">
+        <h2>Your Shopping Cart (<span id="total-items"></span> items)</h2>
+      
+        <div class="cart-content">
+          <div id="cart-items-section">
+            <table id="cart-items-table">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody id="cart-items-body"></tbody>
+            </table>
+          </div>
+          
+          <div id="order-summary-section">
+            <h3>Order Summary</h3>
+            <div class="summary-detail">
+              <p>Total Items: <span id="summary-items"></span></p>
+              <p>Total Price: $<span id="summary-price"></span></p>
+            </div>
+            <button id="checkout-btn">Proceed to Checkout</button>
+          </div>
+        </div>
+      </div>
+      
+      
+    <script src="./Script/carts.js"></script>
+</body>
+</html>

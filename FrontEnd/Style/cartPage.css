@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#cart-page {
+    max-width: 800px;
+    margin: auto;
+}
+
+h2, h3 {
+    margin: 10px 0;
+}
+
+.cart-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+#cart-items-table {
+    width: 70%;
+    border-collapse: collapse;
+}
+
+#cart-items-table th, #cart-items-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.summary-detail {
+    margin-top: 20px;
+}
+
+.item-details {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+}
+
+.item-details img {
+    width: 50px; /* Set fixed width for images */
+    height: 50px; /* Set fixed height for images */
+    margin-right: 10px; /* Adds space between the image and the text */
+}
+
+.button {
+    cursor: pointer;
+}

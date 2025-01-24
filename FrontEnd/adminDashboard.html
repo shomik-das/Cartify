@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="http://localhost:5500/FrontEnd/Style/adminDashboard.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <h2>Admin Dashboard</h2>
+        <div class="button-div">
+          <a href="http://localhost:3001/user/v1/logout" class="nav-btn logout-btn">Logout</a>
+          <a href="http://localhost:3001/login" class="nav-btn login-btn">Login</a>
+          <a href="./dashboard.html" class="nav-btn dashboard-btn">User Dashboard</a>
+          <a href="./cartsPage.html" class="nav-btn carts-btn">Carts</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="dashboard-header">
+        <h1>Manage Products</h1>
+        <a href="http://localhost:3001/admin" class="add-product-btn">Add New Product</a>
+      </section>
+
+      <section id="productList" class="product-list">
+        <!-- Products will be dynamically loaded here -->
+      </section>
+    </main>
+
+    <script src="./Script/adminDashboard.js"></script>
+  </body>
+</html>
